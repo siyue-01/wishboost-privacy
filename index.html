@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>隐私政策 · WishBoost</title>
+<style>
+  :root{
+    --bg:#0a0710; --bg2:#120a1f;
+    --gold:#e8c87a; --gold2:#f7e3ab;
+    --pink:#ff7ad1; --cyan:#7af0ff;
+    --text:#d9cce6; --muted:#9a8fb0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:#000;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;
+    color:var(--text);
+    line-height:1.75;
+    background:
+      radial-gradient(1200px 600px at 70% -10%, rgba(232,200,122,0.10), transparent 60%),
+      radial-gradient(900px 500px at 10% 110%, rgba(255,122,209,0.10), transparent 55%),
+      linear-gradient(180deg,var(--bg),var(--bg2));
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:28px 22px 60px;}
+  .title{
+    font-size:30px;font-weight:700;text-align:center;
+    background:linear-gradient(90deg,var(--gold),var(--pink),var(--cyan));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    letter-spacing:1px;
+  }
+  .subtitle{text-align:center;color:var(--gold);opacity:.6;font-size:12.5px;margin-top:8px;}
+
+  /* 语言切换 */
+  .lang-switch{display:flex;justify-content:center;gap:0;margin:18px auto 4px;width:fit-content;
+    border:1px solid rgba(232,200,122,0.25);border-radius:999px;overflow:hidden;}
+  .lang-switch button{
+    appearance:none;border:0;background:transparent;color:var(--muted);
+    font-size:13px;font-family:inherit;padding:7px 20px;cursor:pointer;transition:.2s;letter-spacing:1px;
+  }
+  .lang-switch button.active{background:linear-gradient(90deg,var(--gold),var(--pink));color:#1a0f1f;font-weight:600;}
+
+  .card{
+    margin-top:22px;padding:20px 20px;border-radius:18px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(232,200,122,0.14);
+    backdrop-filter:blur(6px);
+  }
+  .sec-title{
+    font-size:17.5px;font-weight:600;color:var(--pink);
+    margin-bottom:10px;letter-spacing:.5px;
+  }
+  .intro{color:var(--text);font-size:14.5px;}
+  ul{list-style:none;margin-top:6px;}
+  li{
+    position:relative;padding-left:18px;margin-top:8px;
+    font-size:14.5px;color:var(--text);
+  }
+  li::before{content:"•";position:absolute;left:0;color:var(--cyan);}
+  .mail{
+    color:var(--cyan);text-decoration:none;border-bottom:1px dashed rgba(122,240,255,.4);
+  }
+  .footer{text-align:center;margin-top:36px;color:var(--gold);opacity:.4;font-size:12px;line-height:1.7;}
+  .star{position:fixed;border-radius:50%;background:#fff;opacity:.5;pointer-events:none;}
+
+  /* 语言块显隐 */
+  .lang-block{display:none;}
+  body[data-lang="zh"] .lang-block.zh{display:block;}
+  body[data-lang="en"] .lang-block.en{display:block;}
+</style>
+</head>
+<body data-lang="zh">
+<div class="wrap">
+  <h1 class="title">隐私政策 · Privacy Policy</h1>
+  <p class="subtitle">WishBoost（愿望加持）　｜　最近更新：2026 年 8 月 / Last updated: August 2026</p>
+
+  <div class="lang-switch">
+    <button id="btn-zh" class="active" onclick="setLang('zh')">中文</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- ===================== 中文 ===================== -->
+  <div class="lang-block zh">
+    <div class="card">
+      <p class="intro">「愿望加持」是一款陪伴与灵感类的小应用。我们不把你的数据当作资产，也不做任何窥探。这份政策用最直白的话告诉你：我们拿了什么、怎么用、以及你随时能拿回什么。</p>
+    </div>
+    <div class="card">
+      <div class="sec-title">一、我们不收集你的个人信息</div>
+      <ul>
+        <li>本应用无需注册、无需登录，我们不要求你提供姓名、手机号、邮箱或任何账号。</li>
+        <li>你写下的一句句心愿、每次记录的心情，都只保存在你自己的设备本地（使用系统自带的本地数据库）。</li>
+        <li>这些数据不会上传到任何服务器，开发者（我们）也无法读取、也无法看到它们。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="sec-title">二、我们没有第三方追踪</div>
+      <ul>
+        <li>本应用不含任何广告 SDK、不含任何第三方数据分析 SDK。</li>
+        <li>我们不会追踪你的行为，不会生成用户画像，也不会把任何信息卖给第三方。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="sec-title">三、关于订阅与支付</div>
+      <p class="intro">本应用提供可选的「愿望加持 Pro（WishBoost Pro）」自动续费订阅。订阅通过 Apple App Store 完成，与你 Apple ID 绑定的支付方式结算。</p>
+      <ul>
+        <li>支付过程由 Apple 直接处理，我们不收集、不存储你的任何支付信息（如银行卡号、密码等）。</li>
+        <li>我们仅接收 Apple 提供的必要订阅状态（如是否已订阅），用于解锁对应功能，不涉及你的具体支付账户。</li>
+        <li>你可以随时在 iPhone「设置 → Apple ID → 订阅」中管理或取消。订阅会在当前周期到期前 24 小时自动续费，关闭自动续费后将不再扣款。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="sec-title">四、关于儿童</div>
+      <p class="intro">本应用内容温和、正向，不含不适宜未成年人观看的信息。但我们建议在监护人指导下使用，尤其低龄儿童。</p>
+    </div>
+    <div class="card">
+      <div class="sec-title">五、你如何删除自己的数据</div>
+      <p class="intro">因为所有数据都只存在你设备本地，卸载本应用即视为删除全部本地数据，无需额外操作。</p>
+    </div>
+    <div class="card">
+      <div class="sec-title">六、本政策的更新</div>
+      <p class="intro">如本政策有调整，我们会在应用内与本页面同步更新。你继续使用即表示接受更新后的政策。</p>
+    </div>
+    <div class="card">
+      <div class="sec-title">七、联系我们</div>
+      <p class="intro">如你对隐私有任何疑问，欢迎邮件联系我们：<a class="mail" href="mailto:846286617@qq.com">846286617@qq.com</a></p>
+    </div>
+    <div class="footer">
+      © 2026 李勇 · 愿望加持<br>
+      本 App 及全部原创内容（文案、视觉设计）版权归作者所有
+    </div>
+  </div>
+
+  <!-- ===================== English ===================== -->
+  <div class="lang-block en">
+    <div class="card">
+      <p class="intro">WishBoost is a small companion and inspiration app. We don't treat your data as an asset, and we don't pry. This policy tells you in plain words: what we take, how we use it, and how you can take it back anytime.</p>
+    </div>
+    <div class="card">
+      <div class="sec-title">1. We Don't Collect Your Personal Information</div>
+      <ul>
+        <li>No registration or login required. We don't ask for your name, phone number, email, or any account.</li>
+        <li>The wishes you write and the moods you record are stored only on your own device, using the system's built-in local database.</li>
+        <li>This data is never uploaded to any server, and we (the developers) cannot read or see it.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="sec-title">2. No Third-Party Tracking</div>
+      <ul>
+        <li>This app contains no advertising SDK and no third-party analytics SDK.</li>
+        <li>We don't track your behavior, build user profiles, or sell any information to third parties.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="sec-title">3. About Subscriptions &amp; Payments</div>
+      <p class="intro">This app offers an optional "WishBoost Pro" auto-renewing subscription, handled through the Apple App Store and settled with the payment method linked to your Apple ID.</p>
+      <ul>
+        <li>Payments are processed directly by Apple. We don't collect or store any of your payment information (such as card numbers or passwords).</li>
+        <li>We only receive the necessary subscription status from Apple (such as whether you're subscribed), used solely to unlock features—it never involves your specific payment account.</li>
+        <li>You can manage or cancel anytime in iPhone Settings → Apple ID → Subscriptions. Subscriptions auto-renew 24 hours before the period ends; turning off auto-renew stops future charges.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="sec-title">4. About Children</div>
+      <p class="intro">This app's content is gentle and positive, with nothing unsuitable for minors. We still recommend use under guardian supervision, especially for young children.</p>
+    </div>
+    <div class="card">
+      <div class="sec-title">5. How to Delete Your Data</div>
+      <p class="intro">Because all data lives only on your device, uninstalling the app deletes all local data—no extra steps needed.</p>
+    </div>
+    <div class="card">
+      <div class="sec-title">6. Policy Updates</div>
+      <p class="intro">If this policy changes, we'll update it in the app and on this page. Continued use means you accept the updated policy.</p>
+    </div>
+    <div class="card">
+      <div class="sec-title">7. Contact Us</div>
+      <p class="intro">If you have any privacy questions, feel free to email us at: <a class="mail" href="mailto:846286617@qq.com">846286617@qq.com</a></p>
+    </div>
+    <div class="footer">
+      © 2026 Li Yong · WishBoost<br>
+      This app and all original content (copywriting, visual design) are copyrighted by the author.
+    </div>
+  </div>
+</div>
+<script>
+  function setLang(lang){
+    document.body.setAttribute('data-lang', lang);
+    document.getElementById('btn-zh').classList.toggle('active', lang==='zh');
+    document.getElementById('btn-en').classList.toggle('active', lang==='en');
+    try{ localStorage.setItem('wb_privacy_lang', lang); }catch(e){}
+  }
+  try{
+    var saved = localStorage.getItem('wb_privacy_lang');
+    if(saved==='en'){ setLang('en'); }
+  }catch(e){}
+
+  // 轻量星空背景（纯装饰，无数据收集）
+  for(let i=0;i<40;i++){
+    const s=document.createElement('div');s.className='star';
+    const sz=Math.random()*2+1;
+    s.style.width=sz+'px';s.style.height=sz+'px';
+    s.style.left=Math.random()*100+'vw';
+    s.style.top=Math.random()*100+'vh';
+    s.style.opacity=Math.random()*0.5+0.2;
+    document.body.appendChild(s);
+  }
+</script>
+</body>
+</html>
